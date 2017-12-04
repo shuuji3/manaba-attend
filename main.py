@@ -64,7 +64,7 @@ class Manaba:
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('attend_code', type=int)
+    ap.add_argument('attend_code')
     args = ap.parse_args()
 
     manaba = Manaba()
