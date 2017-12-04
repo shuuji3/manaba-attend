@@ -34,6 +34,15 @@ class Manaba:
         self.br.get(self.attend_url)
         self.br.find_element_by_css_selector('[name="code"]').send_keys(attend_code + '\n')
 
+        # attend_codeに誤りがある場合、ログイン画面には遷移しない
+        s = self.make_soup()
+        error = s.select('.errmsg')
+        if error:
+            success = False
+            print(error[0].text)
+            print('!!! attend failed !!!')
+            return
+
         # 2. Login to manaba
         self.br.find_element_by_css_selector('#username').send_keys(self.id)
         self.br.find_element_by_css_selector('#password').send_keys(self.password)
