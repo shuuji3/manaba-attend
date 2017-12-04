@@ -1,5 +1,6 @@
 import os
 import argparse
+from getpass import getpass
 import yaml
 from bs4 import BeautifulSoup
 from selenium.webdriver import Chrome
@@ -16,8 +17,8 @@ class Manaba:
         credentials_path = os.path.expanduser('~/.manaba_attend')
         if not os.path.exists(credentials_path):
             print('Enter your credentials')
-            self.id = input('  id: ')
-            self.password = input('  password: ')
+            self.id = input('id: ')
+            self.password = getpass()
             with open(credentials_path, 'w') as f:
                 yaml.dump({'id': self.id, 'password': self.password}, f)
             os.chmod(credentials_path, 0o600)
