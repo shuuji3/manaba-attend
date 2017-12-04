@@ -20,6 +20,7 @@ class Manaba:
             self.password = input('  password: ')
             with open(credentials_path, 'w') as f:
                 yaml.dump({'id': self.id, 'password': self.password}, f)
+            os.chmod(credentials_path, 0o600)
         else:
             with open(credentials_path) as f:
                 credentials = yaml.load(f)
