@@ -4,7 +4,7 @@ Manaba の出席カードの提出を自動化するプログラム。
 
 Program to automate an attendance of the Manaba.
 
-<img alt="Demo video" width="400" src="https://j.gifs.com/Xo5Y38.gif">
+[<img alt="Demo video" width="400" src="https://j.gifs.com/Xo5Y38.gif">](https://youtu.be/9ZQMev_WQeE)
 
 ## Requirement
 
