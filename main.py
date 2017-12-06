@@ -57,7 +57,7 @@ class Manaba:
             success = False
             print(error[0].text)
         else:
-            body = s.select('.attend-box-body')[0].text
+            body = s.select('.attend-box-body')[0].text.strip()
             description = s.select('.description')[0].text.strip()
             if '提出済' in description:
                 success = True
