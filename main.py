@@ -48,7 +48,7 @@ class Manaba:
 
         # 2. Login to manaba
         self.br.find_element_by_css_selector('#username').send_keys(self.id)
-        self.br.find_element_by_css_selector('#password').send_keys(self.password)
+        self.br.find_element_by_css_selector('#password').send_keys(self.password + '\n')
 
         # 3. Check the state
         s = self.make_soup()
