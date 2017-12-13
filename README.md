@@ -10,19 +10,21 @@ Program to automate an attendance of the Manaba.
 
 - Python3
 - Google Chrome
+- HomeBrew
 
 ## Installation
 
 ```shell
-cd manaba-attend/
-python3 -m venv env
-source env/bin/activate
-# . env/bin/activate.fish (if you use fish shell 🐟)
-pip install -r requirements.txt
+$ brew install chromedriver
+$ cd manaba-attend/
+$ python3 -m venv env
+$ source env/bin/activate
+$ # . env/bin/activate.fish (if you use fish shell 🐟)
+$ pip install -r requirements.txt
 ```
 
 ## Usage
 
 ```shell
-python main.py 1234567
+$ python main.py 1234567
 ```
