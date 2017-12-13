@@ -1,8 +1,8 @@
 # manaba-attend
 
-Manaba の出席カードの提出を自動化するプログラム。
+[Manaba の出席カード](https://atmnb.tsukuba.ac.jp/attend/tsukuba)の提出を自動化するプログラム。
 
-Program to automate an attendance of the Manaba.
+Program automating to send your attendance on Manaba.
 
 [<img alt="Demo video" width="400" src="https://j.gifs.com/Xo5Y38.gif">](https://youtu.be/9ZQMev_WQeE)
 
