@@ -76,6 +76,9 @@ class Manaba:
         if not success:
             print('!!! attend failed !!!')
 
+        # 4. Close browser
+        self.br.quit()
+
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
