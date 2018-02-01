@@ -16,7 +16,10 @@ class Manaba:
 
     def load_credentials(self):
         credentials_path = os.path.expanduser('~/.manaba_attend')
-        if not os.path.exists(credentials_path):
+        if os.environ.get('MANABA_USERNAME', '') and os.environ.get('MANABA_PASSWORD', ''):
+            self.id = os.environ['MANABA_USERNAME']
+            self.password = os.environ['MANABA_PASSWORD']
+        elif not os.path.exists(credentials_path):
             print('Enter your credentials')
             self.id = input('id: ')
             self.password = getpass()
