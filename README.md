@@ -32,3 +32,7 @@ optional arguments:
   -h, --help     show this help message and exit
   --no-headless  specify to open the browser window.
 ```
+
+## Note
+
+If you want to specify your ID & password via the environment variable, please set them into `MANABA_USERNAME` & `MANABA_PASSWORD`.
