@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
-import os
 import argparse
+import os
 from getpass import getpass
+
 import yaml
 from bs4 import BeautifulSoup
 from selenium.webdriver import Chrome
+from selenium.webdriver.chrome.options import Options
 
 
 class Manaba:
 
-    def __init__(self):
+    def __init__(self, no_headless=False):
         self.attend_url = 'https://atmnb.tsukuba.ac.jp/attend/tsukuba'
-        self.br = Chrome()
+
+        options = Options()
+        if not no_headless:
+            options.add_argument('--headless')
+
+        self.br = Chrome(options=options)
         self.load_credentials()
 
     def load_credentials(self):
@@ -77,7 +84,8 @@ class Manaba:
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('attend_code')
+    ap.add_argument('--no-headless', action='store_true', required=False, help='specify to show the browser window.')
     args = ap.parse_args()
 
-    manaba = Manaba()
+    manaba = Manaba(no_headless=args.no_headless)
     manaba.send_code(args.attend_code)

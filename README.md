@@ -16,15 +16,19 @@ Program automating to send your attendance on Manaba.
 
 ```shell
 $ brew install chromedriver
-$ cd manaba-attend/
-$ python3 -m venv env
-$ source env/bin/activate
-$ # . env/bin/activate.fish (if you use fish shell 🐟)
 $ pip install -r requirements.txt
 ```
 
 ## Usage
 
 ```shell
-$ python main.py 1234567
+$ python main.py -h
+usage: main.py [-h] [--no-headless] attend_code
+
+positional arguments:
+  attend_code
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --no-headless  specify to open the browser window.
 ```
