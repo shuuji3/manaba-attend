@@ -2,5 +2,5 @@
 beautifulsoup4==4.6.3
 lxml==4.3.0
 pyyaml==3.13
-selenium==3.14.1
+selenium==3.141.0
 urllib3==1.24.1
