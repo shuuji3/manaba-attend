@@ -1,7 +1,6 @@
--i https://pypi.org/simple/
 beautifulsoup4==4.7.1
 lxml==4.3.0
-pyyaml==3.13
+PyYAML==4.2b4
 selenium==3.141.0
 soupsieve==1.6.2
 urllib3==1.24.1
