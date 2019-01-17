@@ -8,7 +8,7 @@ Program automating to send your attendance on Manaba.
 
 ## Requirement
 
-### For macOS
+- macOS
 - Python3
 - Google Chrome
 - HomeBrew
@@ -17,8 +17,7 @@ Program automating to send your attendance on Manaba.
 
 ```shell
 $ brew install chromedriver
-$ pipenv install
-# OR $ pip install -r requirements.txt
+$ pipenv install # OR pip install -r requirements.txt
 ```
 
 ## Usage
