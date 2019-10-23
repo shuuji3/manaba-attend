@@ -34,7 +34,7 @@ class Manaba:
             os.chmod(credentials_path, 0o600)
         else:
             with open(credentials_path) as f:
-                credentials = yaml.load(f)
+                credentials = yaml.load(f, Loader=yaml.BaseLoader)
                 self.id = credentials['id']
                 self.password = credentials['password']
 
