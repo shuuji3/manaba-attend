@@ -2,7 +2,7 @@
 --extra-index-url https://pypi.python.org/simple
 beautifulsoup4==4.9.3
 lxml==4.6.2
-pyyaml==5.4
+pyyaml==5.4.1
 selenium==3.141.0
 soupsieve==2.1 ; python_version >= '3.0'
 urllib3==1.26.2
