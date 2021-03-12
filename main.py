@@ -16,10 +16,15 @@ class Manaba:
         options = Options()
         if not no_headless:
             options.add_argument('--headless')
-
-        self.br = Chrome(options=options)
-        self.load_credentials()
-
+            
+        try:
+            self.br = Chrome(options=options)
+            self.load_credentials()
+        
+        except:
+            print('!!! Google chrome is not installed !!! ')
+            exit()
+            
     def load_credentials(self):
         credentials_path = os.path.expanduser('~/.manaba_attend')
         if os.environ.get('MANABA_USERNAME', '') and os.environ.get('MANABA_PASSWORD', ''):
