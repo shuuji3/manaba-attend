@@ -1,0 +1,22 @@
+version: 2
+registries:
+  git-gitlab-com:
+    type: git
+    url: https://gitlab.com
+    username: shuuji3
+    password: "${{secrets.GIT_GITLAB_COM_PASSWORD}}"
+  python-index-pypi-python-org-simple:
+    type: python-index
+    url: https://pypi.python.org/simple
+    token: "${{secrets.PYTHON_INDEX_PYPI_PYTHON_ORG_SIMPLE_TOKEN}}"
+
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  registries:
+  - python-index-pypi-python-org-simple
+  - git-gitlab-com
